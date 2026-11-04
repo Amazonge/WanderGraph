@@ -1,0 +1,9 @@
+# pnpm 11 配置（修复前端启动超时，见 ISSUES #18）：
+# - verifyDepsBeforeRun: false —— `pnpm dev` 不在每次启动前跑依赖状态检查，
+#   避免该检查在 CI 模式下因 ERR_PNPM_IGNORED_BUILDS 退出码 1 把 vite 卡死、
+#   导致 start.py 的 wait_for_port(5173) 超时。dev server 无需每次重验依赖。
+# - onlyBuiltDependencies: 显式批准 core-js 的 postinstall（取代此前无效的
+#   `allowBuilds: core-js: set this to true or false` 占位）。
+verifyDepsBeforeRun: false
+onlyBuiltDependencies:
+  - core-js

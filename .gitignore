@@ -1,0 +1,39 @@
+# ═══ Python ═══
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ═══ Node / 前端 ═══
+node_modules/
+project/frontend/dist/
+.vite/
+.vite-temp/
+*.local
+
+# ═══ 环境变量与密钥（绝不提交） ═══
+.env
+.env.*
+!.env.example
+
+# ═══ 日志 ═══
+*.log
+logs/
+
+# ═══ 操作系统 ═══
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ═══ IDE ═══
+# .idea/ 保留项目级配置，仅忽略易变文件（见 .idea/.gitignore）
+.vscode/
